@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="styles.css">
+	<title>Chatbox</title>
+</head>
+<body>
+	<div class="chatbox-wrapper">
+		<div class="chatbox-toggle" onclick="toggleChat()">
+			<i class='bx bx-message-dots'></i>
+		</div>
+		<div class="chatbox-message-wrapper" id="chatbox">
+			<div class="chatbox-message-header">
+				<div class="chatbox-message-profile">
+					<img src="https://cdn1.vectorstock.com/i/1000x1000/99/65/chat-bot-icon-background-virtual-assistant-vector-24999965.jpg" alt="" class="chatbox-message-image">
+					<div>
+						<h4 class="chatbox-message-name">CHAT</h4>
+						<p class="chatbox-message-status">online</p>
+					</div>
+				</div>
+				<div class="chatbox-message-dropdown">
+					<i class='bx bx-dots-vertical-rounded chatbox-message-dropdown-toggle'></i>
+				</div>
+			</div>
+			<div class="chatbox-message-content">
+				<h4 class="chatbox-message-no-message" id="messageDisplay">You don't have message yet!</h4>
+			</div>
+			<div>
+				<p class="text" id="contentApi"></p>
+			</div>
+			<div class="chatbox-message-bottom">
+				<!-- <form action="#" class="chatbox-message-form" onsubmit="sendMessage(event)">
+					<i class='bx bx-file'></i>
+					<textarea rows="1" placeholder="Type message..." class="chatbox-message-input" id="messageInput"></textarea>
+					<button type="submit" class="chatbox-message-submit"><i class='bx bx-send'></i></button>
+				</form> -->
+				<form id="appsheetForm" onsubmit="sendMessage(event)">
+					<label for="taskRequestProduct">TASK REQUEST PRODUCT:</label>
+					<input type="text" id="taskRequestProduct" placeholder="Enter TASK REQUEST PRODUCT" required><br>
+				
+					<label for="DESCRIPTION">DESCRIPTION</label>
+					<input type="text" id="DESCRIPTION" placeholder="Enter DESCRIPTION" required><br>
+				
+					<label for="reportCategory">REPORT CATEGORY</label>
+					<input type="text" id="reportCategory" placeholder="Enter REPORT CATEGORY" required><br>
+
+					<label for="healthCheckScore">HEALTH CHECK SCORE</label>
+					<input type="text" id="healthCheckScore" placeholder="Enter HEALTH CHECK SCORE" required><br>
+				
+					<button type="submit">Submit</button>
+				</form>
+				
+				<div id="contentApi"></div>				
+			</div>
+		</div>
+	</div>
+	<script src="popup.js"></script>
+</body>
+</html>
